@@ -1,0 +1,254 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 13px;
+  font-family: "Open Sans", sans-serif;
+}
+
+.wrapper {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.visually-hidden {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+}
+
+.intro-block {
+  background-image: url("./images/1.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 10% 10% 380px;
+}
+
+.second-heading {
+  font-weight: 200;
+  font-size: 28px;
+}
+
+.intro-text {
+  padding: 20px 0;
+  line-height: 24px;
+}
+
+.action-button {
+  margin-top: 30px;
+  background-color: rgb(28, 157, 207);
+  border: none;
+  border-radius: 100px;
+  padding: 15px;
+  font-weight: 600;
+  font-size: 14px;
+  color: #fff;
+  box-shadow: 0 2px 25px rgba(0, 0, 0, 0.199);
+}
+
+.action-button:hover {
+  cursor: pointer;
+  background-color: rgb(22, 138, 184);
+}
+
+.steps-block {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.steps-block > div:nth-child(odd)::after {
+  position: absolute;
+  padding: 15px;
+  top: 10px;
+  right: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 70px;
+  height: 70px;
+  color: #fff;
+  font-weight: 600;
+  background-color: rgb(13, 13, 95);
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.438);
+  border-radius: 50%;
+}
+
+.info-block,
+.image-block {
+  position: relative;
+  flex: 0 1 100%;
+}
+
+.info-block {
+  padding: 70px 40px 20px;
+  background-position: left 40px top 20px;
+  background-repeat: no-repeat;
+}
+
+.info-block.eat-icon {
+  background-image: url("./images/icon1.png");
+  background-size: 60px;
+}
+
+.info-block.play-icon {
+  background-image: url("./images/icon2.png");
+  background-size: 50px;
+}
+
+.info-block.sit-icon {
+  background-image: url("./images/icon3.png");
+  background-size: 30px;
+}
+
+.info-block.stay-icon {
+  background-image: url("./images/icon4.png");
+  background-size: 50px;
+}
+
+.info-block.def-icon {
+  background-image: url("./images/icon5.png");
+  background-size: 70px;
+}
+
+
+.info-block.eat-icon::after {
+  content: 'Day 1'
+}
+
+.info-block.play-icon::after {
+  content: 'Week 1'
+}
+
+.info-block.sit-icon::after {
+  content: 'Week 2'
+}
+
+.info-block.stay-icon::after {
+  content: 'Week 3'
+}
+
+.info-block.def-icon::after {
+  content: 'Tomorrow'
+}
+
+.image-block {
+  min-height: 200px;
+  align-self: stretch;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.image-block.eat-icon {
+  background-image: url("./images/2.jpg");
+}
+
+.image-block.play-icon {
+  background-image: url("./images/3.jpg");
+}
+
+.image-block.sit-icon {
+  background-image: url("./images/4.jpg");
+}
+
+.image-block.stay-icon {
+  background-image: url("./images/5.jpg");
+}
+
+.image-block.def-icon {
+  background-image: url("./images/6.jpg");
+}
+
+.third-heading {
+  margin: 15px 0;
+}
+
+.video-block {
+  background-color: #efebe8;
+  text-align: center;
+  padding: 50px 10px;
+}
+
+iframe {
+  width: 90vw;
+  height: calc(90vw / 1.7);
+}
+
+.video-heading {
+  margin-bottom: 20px;
+}
+
+@media screen and (min-width: 768px) {
+  .intro-block {
+    background-size: 50%;
+    background-position: left bottom;
+    padding: 10% 10% 200px 53%;
+    background-color: #efebe8;
+  }
+
+  .info-block,
+  .image-block {
+    flex: 0 1 50%;
+  }
+
+  iframe {
+    width: 60vw;
+    height: calc(60vw / 1.7);
+  }
+
+  .info-block.eat-icon {
+    order: 1;
+  }
+  .image-block.eat-icon {
+    order: 2;
+  }
+
+  .info-block.play-icon {
+    order: 4;
+  }
+  .image-block.play-icon {
+    order: 3;
+  }
+
+  .info-block.sit-icon {
+    order: 5;
+  }
+  .image-block.sit-icon {
+    order: 6;
+  }
+
+  .info-block.stay-icon {
+    order: 8;
+  }
+  .image-block.stay-icon {
+    order: 7;
+  }
+
+  .info-block.def-icon {
+    order: 9;
+  }
+  .image-block.def-icon {
+    order: 10;
+  }
+
+  .steps-block > div:nth-child(odd)::after {
+    top: 69px;
+    right: -35px;
+    z-index: 1;
+  }
+
+  .info-block.play-icon::after,
+  .info-block.stay-icon::after {
+    top: 69px;
+    left: -35px;
+    z-index: 1;
+  }
+}
